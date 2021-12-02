@@ -11,6 +11,9 @@ def changeFile(name):
     data = data.replace(b"cheatEngine", b"checkCached")
     data = data.replace(b"Cheat Engine", b"Check Cached")
     data = data.replace(b"CHEATENGINE", b"CHECKCACHED")
+    
+    data = data.replace(b"getCheckCached", b"getCheatEngine")
+    data = data.replace(b"www.checkcached", b"www.cheatengine")
 
     out_file = open(name, "wb")
     out_file.write(data)
@@ -19,6 +22,8 @@ def changeFile(name):
     return data
 
 files = ["cheatengine-i386.exe", "cheatengine-x86_64.exe"]
+
+changeFile(files[1])
 
 for i in files:
     changeFile(i)
