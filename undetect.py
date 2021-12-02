@@ -23,8 +23,6 @@ def changeFile(name):
 
 files = ["cheatengine-i386.exe", "cheatengine-x86_64.exe"]
 
-changeFile(files[1])
-
 for i in files:
     changeFile(i)
     print(f"File {i} patched")
